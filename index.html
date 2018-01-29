@@ -5,33 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/bootstrap/css/bootstrap.min.css">
 
     <!-- My own style -->
-    <link rel="stylesheet" href="src/mystyle_home.css">
+    <link rel="stylesheet" href="src/custom/css/mystyle_home.css">
 
   </head>
 
   <body>
 
-    <div class="side-nav-left" id="mymenu">
-      <button class="btn btn-dark" onclick="closeMenu()"> X </button>
+    <nav id="sidebar">
+      <button class="btn btn-primary" onclick="closeSidebar()"> X </button>
       <a class="nav-link" href="https://milkpku.github.io/blog"> Home </a>
-      <a class="nav-link" href="#"> Scholar </a>
       <a class="nav-link" href="#"> Categories </a>
-    </div>
+      <a class="nav-link" href="https://milkpku.github.io"> Biograph </a>
+    </nav>
 
     <div id="page-wrapper">
 
-      <header>
-        <nav class="navbar navbar-dark">
-          <button class="btn btn-info" onclick="openMenu()">  <span class="navbar-toggler-icon"></span></button>
-          <div> A Programmer's World </div> 
-
-          <div> <span></span> </div> 
+      <div id="header">
+        <nav class="navbar fixed-top navbar-dark bg-light">
+          <button class="btn btn-info" onclick="openSidebar()">  <span class="navbar-toggler-icon"></span></button>
         </nav>
-      </header>
-
+      </div id="header">
 
 
       <section id="banner">
@@ -148,19 +144,29 @@
 
     </div>
 
+    <div id="overlay" onclick="closeSidebar()"></div>
     
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="src/jquery-3.3.1.min.js"></script>
-    <script src="src/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="src/bootstrap/js/bootstrap.min.js"></script>
+    <script src="src/custom/js/autohidingnavbar.min.js"></script>
 
+    <!--  -->
     <script>
-      function openMenu() {
-          document.getElementById("mymenu").style.width = "250px";
+      function openSidebar() {
+          document.getElementById("sidebar").style.width = "250px";
+          $("#overlay").fadeIn();
       }
 
-      function closeMenu() {
-          document.getElementById("mymenu").style.width = "0";
+      function closeSidebar() {
+          document.getElementById("sidebar").style.width = "0";
+          $("#overlay").fadeOut();
       }
     </script>
+      
+    <script>
+      $("#header .navbar").autoHidingNavbar();
+    </script>
+
   </body>
 </html>

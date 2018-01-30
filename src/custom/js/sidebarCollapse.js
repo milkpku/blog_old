@@ -10,5 +10,5 @@ function closeSidebar() {
 
 $(document).ready(function(){
   $("#sidebarCollapse").on('click', openSidebar);
-  $("#sidebarDismiss").on('click', closeSidebar);
+  $("#sidebarDismiss, #overlay").on('click', closeSidebar);
 });

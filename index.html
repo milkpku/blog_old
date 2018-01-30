@@ -7,15 +7,18 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="src/bootstrap/css/bootstrap.min.css">
 
+    <!-- Font Awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
     <!-- My own style -->
-    <link rel="stylesheet" href="src/custom/css/mystyle_home.css">
+    <link rel="stylesheet" href="src/custom/css/sidebar.css">
 
   </head>
 
   <body>
 
     <nav id="sidebar">
-      <button class="btn btn-primary" onclick="closeSidebar()"> X </button>
+      <button class="btn btn-dark" id="sidebarDismiss"> <i class="fa fa-chevron-circle-left fa-6"></i> </button>
       <a class="nav-link" href="https://milkpku.github.io/blog"> Home </a>
       <a class="nav-link" href="#"> Categories </a>
       <a class="nav-link" href="https://milkpku.github.io"> Biograph </a>
@@ -25,7 +28,7 @@
 
       <div id="header">
         <nav class="navbar fixed-top navbar-dark bg-light">
-          <button class="btn btn-info" onclick="openSidebar()">  <span class="navbar-toggler-icon"></span></button>
+          <button class="btn btn-info" id="sidebarCollapse">  <span class="navbar-toggler-icon"></span></button>
         </nav>
       </div id="header">
 
@@ -140,29 +143,17 @@
 
       </div>
 
-
-
     </div>
 
-    <div id="overlay" onclick="closeSidebar()"></div>
+    <div id="overlay"></div>
     
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="src/bootstrap/js/bootstrap.min.js"></script>
     <script src="src/custom/js/autohidingnavbar.min.js"></script>
 
-    <!--  -->
-    <script>
-      function openSidebar() {
-          document.getElementById("sidebar").style.width = "250px";
-          $("#overlay").fadeIn();
-      }
-
-      function closeSidebar() {
-          document.getElementById("sidebar").style.width = "0";
-          $("#overlay").fadeOut();
-      }
-    </script>
+    <!-- sidebar control js -->
+    <script src="src/custom/js/sidebarCollapse.js"></script>
       
     <script>
       $("#header .navbar").autoHidingNavbar();

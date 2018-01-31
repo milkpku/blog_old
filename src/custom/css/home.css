@@ -1,3 +1,17 @@
+#banner{
+  min-width: 90vw;
+  max-width: 95vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+#banner .carousel{
+  border-radius: 25px;
+  overflow: hidden;
+}
+
 #content{
   min-width: 90vw;
   max-width: 95vw;

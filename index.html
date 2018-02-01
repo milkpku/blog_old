@@ -77,8 +77,10 @@
       <div id="content">
         
         <div class="card-columns">
-          <div class="card">
 
+          <div w3-include-html="article/template/card.html"></div>
+
+          <div class="card">
             <!--Card image-->
             <img class="card-img" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg" alt="Card image cap">
 
@@ -187,6 +189,7 @@
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="src/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="src/custom/js/autohidingnavbar.min.js"></script>
 
     <!-- sidebar control js -->
@@ -194,6 +197,7 @@
       
     <script>
       $("#header .navbar").autoHidingNavbar();
+      w3.includeHTML();
     </script>
 
   </body>

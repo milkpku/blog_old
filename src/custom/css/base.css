@@ -1,0 +1,23 @@
+html{
+  font-size: 9px;
+}
+
+@media (min-width: 450px)
+{
+  html{
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 850px)
+{
+  html{
+    font-size: 20px;
+  }
+}
+
+#page-wrapper{
+  min-width: 80vw;
+  max-width: 90vw;
+  margin: auto;
+}

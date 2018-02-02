@@ -1,7 +1,13 @@
-.card .text-white a:hover{
-  color: black;
+.card {
+    max-width: 35vw;
+    min-width: 25vw;
 }
 
 .card-img-overlay {
     top: auto;
 }
+
+.card .text-white a:hover{
+  color: black;
+}
+

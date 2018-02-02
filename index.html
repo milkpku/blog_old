@@ -173,18 +173,25 @@
 
     <div id="overlay"></div>
     
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- load all the refered link -->
     <script src="https://www.w3schools.com/lib/w3.js"></script>
-    <script src="src/custom/js/autohidingnavbar.min.js"></script>
+    <script>
+        w3.includeHTML();
+    </script>
 
     <!-- sidebar control js -->
     <script src="src/custom/js/sidebarCollapse.js"></script>
-      
+
+    <!-- navbar auto hiding -->
+    <script src="src/custom/js/autohidingnavbar.min.js"></script>
     <script>
-      $("#navbar .navbar").autoHidingNavbar();
-      w3.includeHTML();
+      $(document).ready(function(){
+        $("#navbar .navbar").autoHidingNavbar();
+      })
     </script>
 
   </body>

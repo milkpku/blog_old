@@ -2,18 +2,6 @@
   color: black;
 }
 
-.card-text-container {
-    position: relative;
-    height: 100%;
-}
-
-.bottom-align-text{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.bottom-align-text a{
-    margin-top: 5;
+.card-img-overlay {
+    top: auto;
 }

@@ -2,10 +2,19 @@ html{
   font-size: 9px;
 }
 
+.page-wrapper {
+  width: 95vw;
+  margin: auto;
+}
+
 @media (min-width: 450px)
 {
   html{
     font-size: 15px;
+  }
+
+  .page-wrapper {
+    width: 90vw;
   }
 }
 
@@ -14,10 +23,8 @@ html{
   html{
     font-size: 20px;
   }
-}
 
-#page-wrapper{
-  min-width: 80vw;
-  max-width: 90vw;
-  margin: auto;
+  .page-wrapper {
+    width: 80vw;
+  }
 }

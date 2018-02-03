@@ -1,0 +1,29 @@
+.article-content {
+  width: 95vw;
+  margin: auto;
+}
+
+@media (min-width: 450px)
+{
+  .article-content {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 850px)
+{
+  .article-content {
+    width: 70vw;
+  }
+}
+
+.article-content {
+    font-size: 1.3rem;
+    font-family: "Academica Book Pro", Times, Georgia, "WenQuanYi Micro Hei", serif;
+}
+
+.article-info {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: gray;
+}

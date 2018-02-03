@@ -1,9 +1,7 @@
 #banner{
   margin-top: 4rem;
-  margin-bottom: 0.8rem;
 }
 
 #banner .carousel{
-  border-radius: 1rem;
   overflow: hidden;
 }

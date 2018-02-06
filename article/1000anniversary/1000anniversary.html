@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://cdn.rawgit.com/hilios/jQuery.countdown/2.2.0/dist/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="test.css">
+
+</head>
+
+<body>
+  <div class="section" style="background-color: hsla(30, 50%, 50%, 1);">
+    <div class="item-center">
+      <h1> 献给我最爱最爱的小松鼠 </h1>
+    </div>
+  </div>
+  <div class="section" style="background-color: hsla(175, 50%, 50%, 1);">
+    <div class="row">
+      <div class="col-5 container">
+          <div class="item-center">
+            <h1> 第一次见面是在图书馆 </h1>
+            <p> 我紧张地丢下巧克力就遁了 ……</p>
+          </div>
+      </div>
+      
+      <div class="col-7 container">
+        <div class="item-center">
+        <!-- <img src="img/LRY_2202.jpg"> -->
+        <img src="https://goo.gl/yv7L5f">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="background-color: hsla(0, 50%, 50%, 1);">
+    
+    <div class="row">
+      <div class="col-6 container">
+
+        <div class="item-center">
+        <!-- <img src="img/LRY_2761.jpg"> -->
+        <img src="https://goo.gl/uE7Wg6">
+      </div>
+      </div>
+      
+      <div class="col-6 container">
+
+        <div class="item-center">
+        <h1> 盛夏的夜晚在静园牵手 </h1>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="countdown">
+    <div class="main-example">
+      <h1>
+        从相识到如今我们已经一起度过:
+      </h1>
+      <div class="countdown-container" id="main-example">
+      </div>
+      <h1> 以后也一定要一起快乐地走下去哦~ </h1>
+    </div>
+    <script type="text/template" id="main-example-template">
+      <div class="time <%= label %>">
+        <span class="count curr top"><%= curr %></span>
+        <span class="count next top"><%= next %></span>
+        <span class="count next bottom"><%= next %></span>
+        <span class="count curr bottom"><%= curr %></span>
+        <span class="label"><%= label.length < 6 ? label : label.substr(0, 3)  %></span>
+      </div>
+    </script>
+    <script type="text/javascript">
+      $(window).on('load', function() {
+        var labels = ['days', 'hours', 'minutes', 'seconds'],
+          // nextYear = (new Date().getFullYear() + 1) + '/01/01',
+          nextYear = '2015/5/18',
+          template = _.template($('#main-example-template').html()),
+          currDate = '00:00:00:00',
+          nextDate = '00:00:00:00',
+          parser = /([0-9]+)/gi,
+          $example = $('#main-example');
+        // Parse countdown string to an object
+        function strfobj(str) {
+          var parsed = str.match(parser),
+            obj = {};
+          labels.forEach(function(label, i) {
+            obj[label] = parsed[i]
+          });
+          return obj;
+        }
+        // Return the time components that diffs
+        function diff(obj1, obj2) {
+          var diff = [];
+          labels.forEach(function(key) {
+            if (obj1[key] !== obj2[key]) {
+              diff.push(key);
+            }
+          });
+          return diff;
+        }
+        // Build the layout
+        var initData = strfobj(currDate);
+        labels.forEach(function(label, i) {
+          $example.append(template({
+            curr: initData[label],
+            next: initData[label],
+            label: label
+          }));
+        });
+        // Starts the countdown
+        $example.countdown(nextYear, {elapse: true}).on('update.countdown', function(event) {
+          var newDate = event.strftime('%D:%H:%M:%S'),
+            data;
+          if (newDate !== nextDate) {
+            currDate = nextDate;
+            nextDate = newDate;
+            // Setup the data
+            data = {
+              'curr': strfobj(currDate),
+              'next': strfobj(nextDate)
+            };
+            // Apply the new values to each node that changed
+            diff(data.curr, data.next).forEach(function(label) {
+              var selector = '.%s'.replace(/%s/, label),
+                  $node = $example.find(selector);
+              // Update the node
+              $node.removeClass('flip');
+              $node.find('.curr').text(data.curr[label]);
+              $node.find('.next').text(data.next[label]);
+              // Wait for a repaint to then flip
+              _.delay(function($node) {
+                $node.addClass('flip');
+              }, 50, $node);
+            });
+          }
+        });
+      });
+    </script>
+  </div>
+</body>
+</html>

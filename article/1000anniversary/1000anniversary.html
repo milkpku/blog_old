@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdn.rawgit.com/hilios/jQuery.countdown/2.2.0/dist/jquery.countdown.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/lodash.min.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -17,24 +17,25 @@
 </head>
 
 <body>
-  <div class="section" style="background-color: hsla(30, 50%, 50%, 1);">
+  <div class="section" style="background-color: hsla(330, 50%, 50%, 1);">
     <div class="item-center">
       <h1> 献给我最爱最爱的小松鼠 </h1>
+      <p> by 大老虎 </p>
     </div>
   </div>
-  <div class="section" style="background-color: hsla(175, 50%, 50%, 1);">
+  <div class="section" style="background-color: hsla(170, 50%, 50%, 1);">
     <div class="row">
-      <div class="col-5 container">
+      <div class="col-5 item-table">
           <div class="item-center">
-            <h1> 第一次见面是在图书馆 </h1>
-            <p> 我紧张地丢下巧克力就遁了 ……</p>
+            <h1> 初夏时在图书馆相伴学习 </h1>
+            <p> 第一次见面大老虎紧张地放下巧克力就遁了…… </p>
           </div>
       </div>
       
-      <div class="col-7 container">
+      <div class="col-7 item-table">
         <div class="item-center">
-        <!-- <img src="img/LRY_2202.jpg"> -->
-        <img src="https://goo.gl/yv7L5f">
+        <img src="img/LRY_2202-min.jpg">
+        <!-- <img src="https://goo.gl/yv7L5f"> -->
         </div>
       </div>
     </div>
@@ -43,18 +44,62 @@
   <div class="section" style="background-color: hsla(0, 50%, 50%, 1);">
     
     <div class="row">
-      <div class="col-6 container">
+      <div class="col-6 item-table">
 
         <div class="item-center">
-        <!-- <img src="img/LRY_2761.jpg"> -->
-        <img src="https://goo.gl/uE7Wg6">
+        <img src="img/LRY_2761-min.jpg">
+        <!-- <img src="https://goo.gl/uE7Wg6"> -->
       </div>
       </div>
       
-      <div class="col-6 container">
+      <div class="col-6 item-table">
 
         <div class="item-center">
-        <h1> 盛夏的夜晚在静园牵手 </h1>
+        <h1> 盛夏的夜晚在静园轻轻牵手 </h1>
+        <p> 幸好黑夜掩盖了我的脸红心跳 </p>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="background-color: hsla(190, 50%, 50%, 1);">
+    
+    <div class="row">
+      <div class="col-5 item-table">
+
+        <div class="item-center">
+          <h1> 一起庆祝小松鼠顺利毕业 </h1>
+          
+      </div>
+      </div>
+      
+      <div class="col-7 item-table">
+
+        <div class="item-center">
+        <img src="img/LRY_2187-min.jpg">
+        <!-- <img src="https://goo.gl/XLSW1z"> -->
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="background-color: hsla(20, 50%, 50%, 1);">
+    
+    <div class="row">
+      <div class="col-6 item-table">
+
+        <div class="item-center">
+          
+        <img src="img/celebrate.jpg">
+        <!-- <img src="https://goo.gl/qqZRd4"> -->
+      </div>
+      </div>
+      
+      <div class="col-6 item-table">
+
+        <div class="item-center">
+          <h1> 一起庆祝大老虎的第一份成果发表 </h1>
+        
       </div>
       </div>
     </div>
@@ -62,12 +107,14 @@
 
   <div class="countdown">
     <div class="main-example">
-      <h1>
-        从相识到如今我们已经一起度过:
+      <h1 class="text-content">
+        从相识到如今我们已经一起走过:
       </h1>
       <div class="countdown-container" id="main-example">
       </div>
-      <h1> 以后也一定要一起快乐地走下去哦~ </h1>
+      <h1 class="text-content"> 
+        希望接下来的岁月里我们也有彼此~ 
+      </h1>
     </div>
     <script type="text/template" id="main-example-template">
       <div class="time <%= label %>">

@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <!-- My own style -->
+    <link rel="stylesheet" href="../../src/custom/css/base.css">
+    <link rel="stylesheet" href="../../src/custom/css/sidebar.css">
+    <link rel="stylesheet" href="../../src/custom/css/post-header.css">
+    <link rel="stylesheet" href="../../src/custom/css/article.css">
+
+  </head>
+
+  <body>
+
+    <div w3-include-html="../../widget/side-navbar.html"></div>
+
+    <div class="post-header">
+        <div class="post-header-img" style="background-image: url(http://nebula.wsimg.com/44531cdeed26e277e8fb54aad1292590?AccessKeyId=C9CD95C132B0D8F5C093&disposition=0&alloworigin=1)">
+        </div>
+        <div class="post-header-text text-white">
+            <h1> C++线性运算库梳理 </h1>
+            <p>Li-Ke Ma</p>
+        </div>
+    </div>
+
+    <div class="article-content">
+
+        <div class="article-info"> 
+            by Li-Ke Ma, 2017-12-16
+        </div>
+
+        <div w3-include-html="2017_Dec_16_Linear_Lib.html"></div>
+
+    </div>
+
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- load all the refered link -->
+    <script src="../../src/custom/js/w3.js"></script>
+    <script>
+        w3.includeHTML();
+    </script>
+
+    <!-- sidebar control js -->
+    <script src="../../src/custom/js/sidebarCollapse.js"></script>
+
+    <!-- navbar auto hiding -->
+    <script src="../../src/custom/js/autohidingnavbar.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#navbar .navbar").autoHidingNavbar();
+      })
+    </script>
+  </body>
+</html>

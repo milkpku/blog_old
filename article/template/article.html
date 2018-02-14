@@ -45,13 +45,16 @@
 
         <p>Monte Carlo algorithm is mainly used in situation where directly integration is hard or impossible. By sampling following a specific distribution and averaging those samplings, we can get a good estimation of the target integration.<p>
 
-        <p>There are plenty of articles mention about Monte Carlo algorithm, however non of them investigate deeper in its techniques. This article is a note from Chapter 31 of Computer Graphics Principle and Practice, which may show some practical techniques of Monte Carlo algorithm.</p>
+        <p>由于笔者在学习工作中需要大量用到c++线性运算库进行科学计算，在配置环境的摸索过程中趟了不少坑，所以写下常用工具以及配置心得，以备日后查阅，也方便新来者快速上手。</p>
 
-        <p>Monte Carlo algorithm is mainly used in situation where directly integration is hard or impossible. By sampling following a specific distribution and averaging those samplings, we can get a good estimation of the target integration.<p>
+        <h1 id="c线性运算库">C++线性运算库</h1>
+        
+        <p>c++中可用的线性运算库有很多种，笔者也见过很多做计算机的同仁不满意现有的库，自己实现线性运算库。然而笔者并不打算自己重新造轮子，毕竟计算机领域的一大优势就在于我们能通过开源的优秀代码，站在别人的肩膀上更进一步。在做过一些调查以后，笔者主要介绍两个c++线性运算库，其中 Eigen 是笔者工作生产中常用的库。</p>
 
-        <p>There are plenty of articles mention about Monte Carlo algorithm, however non of them investigate deeper in its techniques. This article is a note from Chapter 31 of Computer Graphics Principle and Practice, which may show some practical techniques of Monte Carlo algorithm.</p>
+        <h2 id="eigen">Eigen</h2>
 
-        <p>Monte Carlo algorithm is mainly used in situation where directly integration is hard or impossible. By sampling following a specific distribution and averaging those samplings, we can get a good estimation of the target integration.<p>
+        <p><a href="http://eigen.tuxfamily.org">Eigen</a> 是一款十分著名的线性运算模板库， Eigen 支持稠密矩阵(Dense Matrix)和稀疏矩阵(Sparse Matrix)运算，并内置实现了对两种矩阵的求解器(Solver)。使用 Eigen 十分简单，因为是模板库，所以只需要将头文件拷入 include 目录即可，缺点是编译时比较费时。Eigen 的稠密矩阵运算在某些平台上的性能甚至接近 Intel<span class="katex--inline">KaTeX parse error: Expected group after '^' at position 1: ^̲®</span> MKL [1]。虽然 Eigen 的求解器从效率来讲并不算最好，但将其作为矩阵容器是一个很好的选择，在求解大型问题时再通过连向诸如 SuiteSparse 等顶级求解器即可。TensorFlow 即使用了Eigen。在 3.3 之后，Eigen 引入了对其他 BLAS 的接口，支持了包括 MKL，OpenBLAS 等高性能库，使得其性能还可能更进一步提高。</p>
+    
     </div>
 
 

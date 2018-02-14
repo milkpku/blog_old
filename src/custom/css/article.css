@@ -1,6 +1,7 @@
 .article-content {
   width: 95vw;
   margin: auto;
+  font-size: 16px;
 }
 
 @media (min-width: 450px)
@@ -14,6 +15,7 @@
 {
   .article-content {
     width: 70vw;
+    font-size: 18px;
   }
 }
 

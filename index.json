@@ -1,0 +1,9 @@
+{
+  "banner"  : [],
+  "popular" : ["./article/test", 
+    "./article/2015_Dec_5_Computationable",
+    "./article/2017_Dec_16_Linear_Lib"],
+  "math" : [],
+  "computer" : ["./article/2017_Dec_16_Linear_Lib"],
+  "philosophy" : ["./article/2015_Dec_5_Computationable"]
+}

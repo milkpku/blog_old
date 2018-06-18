@@ -1,3 +1,4 @@
+## -*- coding: utf-8 -*-
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -35,25 +36,7 @@
 
   <body>
 
-    <nav id="sidebar">
-  <button class="btn btn-dark" id="sidebarDismiss"> <i class="fa fa-chevron-circle-left fa-6"></i> </button>
-  <a class="nav-link" href="https://milkpku.github.io/blog"> <h3>Home</h3>  </a>
-  <a class="nav-link" data-toggle="collapse" href="#categories"> <h3>Categories</h3> </a>
-  <div class="collapse" id="categories">
-    <a class="nav-link" href="#"> Mathematics </a>
-    <a class="nav-link" href="#"> Philosophy </a>
-    <a class="nav-link" href="#"> Computer Science </a>
-  </div>
-  <a class="nav-link" href="https://milkpku.github.io"> <h3>Biograph</h3> </a>
-</nav>
-
-<div id="overlay"></div>
-
-<div id="navbar">
-  <nav class="navbar fixed-top navbar-dark bg-light">
-    <button class="btn btn-info" id="sidebarCollapse">  <span class="navbar-toggler-icon"></span></button>
-  </nav>
-</div>
+    <%include file="widget/side-navbar.html"/>
 
 
     <section id="banner">
@@ -122,66 +105,9 @@
 
         <div class="card-columns">
 
-            <div class="card">
-  <!--Card image-->
-    <img class="card-img" src="http://postperspective.com/wp-content/uploads/2016/02/raytracing.jpg" alt="Card image cap">
-
-    <!--Card content-->
-    <div class="card-body">
-      <!-- link to article page -->
-      <a class="card-link-cover" href="article/test/article.html"></a>
-
-      <!-- title of card -->
-      <h3 class="card-title"> Monte Carlo Method: Sum, Integration and Matrix Multiplication测试 </h3>
-
-      <!-- abstract/introduction -->
-      <p> hellow world </p>
-
-      <!-- tags -->
-      <span class="badge badge-pill badge-info"> Computer Science </span>
-    </div>
-</div>
-
-            <div class="card">
-  <!--Card image-->
-    <img class="card-img" src="http://www.compadre.org/informal/images/features/lorenzattractorsmallnew-8-2.jpg" alt="Card image cap">
-
-    <!--Card content-->
-    <div class="card-body">
-      <!-- link to article page -->
-      <a class="card-link-cover" href="article/2015_Dec_5_Computationable/article.html"></a>
-
-      <!-- title of card -->
-      <h3 class="card-title"> 经典物理中的决定论与可计算性 </h3>
-
-      <!-- abstract/introduction -->
-      <p> 从牛顿建立起经典物理的大厦开始，有一个幽灵一直萦绕在物理学家和哲学家心头，那就是遵循牛顿力学的物质世界如何容许意识的存在。《皇帝新脑》就是英国物理学家Roger Penrose为此所作的努力。笔者结合自己的思考，将经典物理中的决定论单独提出作为讨论的对象。 </p>
-
-      <!-- tags -->
-      <span class="badge badge-pill badge-info"> Philosophy </span>
-    </div>
-</div>
-
-            <div class="card">
-  <!--Card image-->
-    <img class="card-img" src="http://faculty.cse.tamu.edu/davis/suitesparse_files/SuiteSparse_CHOLMOD_340x190.jpg" alt="Card image cap">
-
-    <!--Card content-->
-    <div class="card-body">
-      <!-- link to article page -->
-      <a class="card-link-cover" href="article/2017_Dec_16_Linear_Lib/article.html"></a>
-
-      <!-- title of card -->
-      <h3 class="card-title"> C++线性运算库梳理 </h3>
-
-      <!-- abstract/introduction -->
-      <p> c++中可用的线性运算库有很多种，本文整理了C++科学计算中常用的线性运算库以及稀疏矩阵求解库 </p>
-
-      <!-- tags -->
-      <span class="badge badge-pill badge-info"> Computer Engineering </span>
-    </div>
-</div>
-
+          %for card in data["popular"]:
+            <%include file="${card}/card.html"/>
+          %endfor
           
         </div>
 
@@ -196,26 +122,9 @@
         </div>
 
         <div class="card-columns">
-            <div class="card">
-  <!--Card image-->
-    <img class="card-img" src="http://faculty.cse.tamu.edu/davis/suitesparse_files/SuiteSparse_CHOLMOD_340x190.jpg" alt="Card image cap">
-
-    <!--Card content-->
-    <div class="card-body">
-      <!-- link to article page -->
-      <a class="card-link-cover" href="article/2017_Dec_16_Linear_Lib/article.html"></a>
-
-      <!-- title of card -->
-      <h3 class="card-title"> C++线性运算库梳理 </h3>
-
-      <!-- abstract/introduction -->
-      <p> c++中可用的线性运算库有很多种，本文整理了C++科学计算中常用的线性运算库以及稀疏矩阵求解库 </p>
-
-      <!-- tags -->
-      <span class="badge badge-pill badge-info"> Computer Engineering </span>
-    </div>
-</div>
-
+          %for card in data["computer"]:
+            <%include file="${card}/card.html"/>
+          %endfor
         </div>
 
       </div>
@@ -230,6 +139,9 @@
 
         <div class="card-columns">
 
+          %for card in data["math"]:
+            <%include file="${card}/card.html"/>
+          %endfor
 
         </div>
 
@@ -245,26 +157,9 @@
 
         <div class="card-columns">
 
-            <div class="card">
-  <!--Card image-->
-    <img class="card-img" src="http://www.compadre.org/informal/images/features/lorenzattractorsmallnew-8-2.jpg" alt="Card image cap">
-
-    <!--Card content-->
-    <div class="card-body">
-      <!-- link to article page -->
-      <a class="card-link-cover" href="article/2015_Dec_5_Computationable/article.html"></a>
-
-      <!-- title of card -->
-      <h3 class="card-title"> 经典物理中的决定论与可计算性 </h3>
-
-      <!-- abstract/introduction -->
-      <p> 从牛顿建立起经典物理的大厦开始，有一个幽灵一直萦绕在物理学家和哲学家心头，那就是遵循牛顿力学的物质世界如何容许意识的存在。《皇帝新脑》就是英国物理学家Roger Penrose为此所作的努力。笔者结合自己的思考，将经典物理中的决定论单独提出作为讨论的对象。 </p>
-
-      <!-- tags -->
-      <span class="badge badge-pill badge-info"> Philosophy </span>
-    </div>
-</div>
-
+          %for card in data["philosophy"]:
+            <%include file="${card}/card.html"/>
+          %endfor
 
         </div>
 

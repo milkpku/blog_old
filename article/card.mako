@@ -5,7 +5,7 @@
     <!--Card content-->
     <div class="card-body">
       <!-- link to article page -->
-      <a class="card-link-cover" href="${data['dir_path']}/article.html"></a>
+      <a class="card-link-cover" href="${data['article_path']}"></a>
 
       <!-- title of card -->
       <h3 class="card-title"> ${data['title']} </h3>

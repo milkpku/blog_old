@@ -27,43 +27,38 @@
     <link rel="stylesheet" href="../../src/custom/css/article.css">
 
     <!-- title -->
-    <title> C++线性运算库梳理 | Li-Ke's blog </title>
-    <meta name="Keywords" content="C++, Linear Algebra, Sparse Matrix">
+    <title> ${data['title']} | Li-Ke's blog </title>
+    <meta name="Keywords" content="template">
 
   </head>
 
   <body>
 
-    <div w3-include-html="../../widget/side-navbar.html"></div>
+    <%include file="../widget/side-navbar.html"/>
 
     <div class="post-header">
-        <div class="post-header-img" style="background-image: url(http://nebula.wsimg.com/44531cdeed26e277e8fb54aad1292590?AccessKeyId=C9CD95C132B0D8F5C093&disposition=0&alloworigin=1)">
+      <div class="post-header-img" style="background-image: url(${data['title_img']})">
         </div>
         <div class="post-header-text text-white">
-            <h1> C++线性运算库梳理 </h1>
-            <p>Li-Ke Ma</p>
+          <h1> ${data['title']} </h1>
+          <p> ${data['author']} </p>
         </div>
     </div>
 
     <div class="article-content">
 
         <div class="article-info"> 
-            by Li-Ke Ma, 2017-12-16
+          by ${data['author']}, ${data['date']}
         </div>
 
-        <div w3-include-html="2017_Dec_16_Linear_Lib.html"></div>
+        <%include file="${data['content_ref']}"/>
 
     </div>
+
 
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-    <!-- load all the refered link -->
-    <script src="../../src/custom/js/w3.js"></script>
-    <script>
-        w3.includeHTML();
-    </script>
 
     <!-- mathjax -->
     <script type="text/x-mathjax-config">
@@ -72,7 +67,7 @@
       });
     </script>
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    
+
     <!-- sidebar control js -->
     <script src="../../src/custom/js/sidebarCollapse.js"></script>
 

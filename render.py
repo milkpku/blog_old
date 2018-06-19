@@ -23,7 +23,7 @@ def load_json(path):
   dict to json
 """
 def load_csv(path):
-  with open(path) as fh:
+  with open(path, encoding="utf-8") as fh:
     reader = csv.DictReader(fh)
     data = []
     for row in reader:

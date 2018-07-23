@@ -166,6 +166,24 @@
       </div>
     </div>
     
+    <div class="section" id="essay-section">
+      <div class="section-wrapper">
+
+        <div class="section-header">
+          <h1> ESSAY </h1>
+        </div>
+
+        <div class="card-columns">
+
+          %for card in data["essay"]:
+            <%include file="${card}/card.html"/>
+          %endfor
+
+        </div>
+
+      </div>
+    </div>
+
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

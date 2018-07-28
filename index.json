@@ -1,13 +1,25 @@
 {
   "banner"  : [],
-  "popular" : [ "./article/2018_Jul_22_Dictator",
+  
+  "popular" : [ 
+    "./article/2018_Jul_22_Dictator",
   	"./article/2015_Mar_11_The_Republic_book_1",
     "./article/2015_Dec_5_Computationable",
-    "./article/2017_Dec_16_Linear_Lib"],
+    "./article/2017_Dec_16_Linear_Lib"
+  ],
+
   "math" : [],
-  "computer" : ["./article/2017_Dec_16_Linear_Lib"],
-  "philosophy" : ["./article/2015_Mar_11_The_Republic_book_1",
+
+  "computer" : [
+    "./article/2017_Dec_16_Linear_Lib"
+  ],
+  
+  "philosophy" : [
+    "./article/2015_Mar_11_The_Republic_book_1",
     "./article/2015_Dec_5_Computationable",
-    "./article/2015_Dec_29_Halting_Problem"],
+    "./article/2015_Dec_29_Halting_Problem",
+    "./article/2016_Apr_17_Divine_Comedy"
+  ],
+  
   "essay" : ["./article/2018_Jul_22_Dictator"]
 }

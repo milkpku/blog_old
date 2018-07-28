@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="../../src/custom/css/sidebar.css">
     <link rel="stylesheet" href="../../src/custom/css/post-header.css">
     <link rel="stylesheet" href="../../src/custom/css/article.css">
+    <link rel="stylesheet" href="../../src/custom/css/comments.css">
 
     <!-- title -->
     <title> ${data['title']} | Li-Ke's blog </title>
@@ -55,6 +56,8 @@
 
     </div>
 
+    <!-- comments widget -->
+    <%include file="../widget/comments.html"/>
 
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

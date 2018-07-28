@@ -14,6 +14,8 @@
       <p> ${data['abstract']} </p>
 
       <!-- tags -->
-      <span class="badge badge-pill badge-info"> ${data['tag']} </span>
+      % for tag in data['tag']:
+        <span class="badge badge-pill badge-info"> ${tag} </span>
+      % endfor
     </div>
 </div>

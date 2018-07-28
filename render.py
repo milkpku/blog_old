@@ -6,18 +6,18 @@ import csv
 
 TEMPLATE_DIR = 'article/'
 
-"""
-  load json data from info.json
-"""
-def load_json(path):
-  data_io = open(path + "/info.json", 'rb')
-  data_content = data_io.read().decode('utf-8')
-  data = json.loads(data_content)
+# """
+#   load json data from info.json
+# """
+# def load_json(path):
+#   data_io = open(path + "/info.json", 'rb')
+#   data_content = data_io.read().decode('utf-8')
+#   data = json.loads(data_content)
 
-  data["content_ref"] = "../../" + path + '/' + data["content_ref"]
-  data["dir_path"] = path
+#   data["content_ref"] = "../../" + path + '/' + data["content_ref"]
+#   data["dir_path"] = path
 
-  return data
+#   return data
 
 """
   dict to json
@@ -29,6 +29,7 @@ def load_csv(path):
     for row in reader:
       row["article_path"] = "article/%s/article.html" % row["dir_name"]
       row["card_path"] = "article/%s/card.html" % row["dir_name"]
+      row["tag"] = list(filter(lambda x: x, row["tag"].split(";")))
 
       json_str = json.dumps(row)
       json_data = json.loads(json_str)
@@ -109,6 +110,7 @@ if __name__=="__main__":
   # render_index()
 
   data = load_csv("article/article_list.csv")
+  # from IPython import embed; embed()
   for item in data:
     render(item);
 

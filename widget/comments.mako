@@ -1,13 +1,9 @@
-<div id="comments-container">
-  <div id="comments">
-  
-  </div>
-</div>
+<div id="comments"></div>
 <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
   var gitment = new Gitment({
-    // id: '',
+    id: '${data["title"]}',
     owner: 'milkpku',
     repo: 'blog',
     oauth: {

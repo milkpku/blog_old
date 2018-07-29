@@ -54,10 +54,11 @@
 
         <%include file="${data['content_ref']}"/>
 
+        <hr>
     </div>
-
+    
     <!-- comments widget -->
-    <%include file="../widget/comments.html"/>
+    <%include file="../widget/comments.mako"/>
 
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
